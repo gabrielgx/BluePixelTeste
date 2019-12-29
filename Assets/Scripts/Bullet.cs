@@ -8,10 +8,12 @@ public class Bullet : MonoBehaviour
     
    public float velo;
    public GameObject explosion;
-    public PlayerController player;
+   public PlayerController player;
+   private SoundController soundSFX;
     private void Awake()
     {
      player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+     soundSFX = GameObject.Find("AudioSource").GetComponent<SoundController>();
     }
     void Start()
     {
@@ -22,6 +24,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            soundSFX.sounds[0].Play();
             Instantiate(explosion, collision.transform.position, Quaternion.identity);
             Destroy(collision.gameObject);           
             Destroy(this.gameObject);

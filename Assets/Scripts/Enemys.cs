@@ -9,8 +9,8 @@ public class Enemys : MonoBehaviour
     public PointsToFollow path;
     public float speed = 1;
     public float maxDistanceToGoal = .1f;
-
     private IEnumerator<Transform> _currentPoint;
+    private SoundController soundSFX;
 
     public enum FollowType
     {
@@ -19,8 +19,12 @@ public class Enemys : MonoBehaviour
         Lerp
     }
 
-    
 
+    private void Awake()
+    {
+
+        soundSFX = GameObject.Find("AudioSource").GetComponent<SoundController>();
+    }
     private void Start()
     {
         if (path == null)
@@ -68,6 +72,7 @@ public class Enemys : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            soundSFX.sounds[2].Play();
             Instantiate(explosion, this.gameObject.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }

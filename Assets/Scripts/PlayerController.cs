@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     public int life;
     public int score;
     public int record;
+    private SoundController soundSFX;
 
     private void Awake()
     {
+        soundSFX = GameObject.Find("AudioSource").GetComponent<SoundController>();
         record = 0;
         
         if (PlayerPrefs.HasKey("score"))
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
             
             if (life == 0)
             {
+                soundSFX.sounds[1].Play();
                 Invoke("ReloadLevel", 2f);
                 Instantiate(explosion, this.gameObject.transform.position, Quaternion.identity);
                 this.gameObject.SetActive(false);
