@@ -166,6 +166,6 @@ MonoBehaviour:
   explosion: {fileID: 6520759049596794917, guid: 28a2a84bcbfa0214db52fb0c7b95ebe8,
     type: 3}
   type: 0
-  path: {fileID: 6622651513354489058, guid: 5bda6708fd0b9a84683ba7dd362effed, type: 3}
+  path: {fileID: 5473384734857798439, guid: 5bda6708fd0b9a84683ba7dd362effed, type: 3}
   speed: 500
   maxDistanceToGoal: 0.1

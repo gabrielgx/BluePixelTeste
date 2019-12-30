@@ -69,8 +69,5 @@ public class Menus : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void Sair()
-    {
-        Application.Quit();
-    }
+
 }
