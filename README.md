@@ -10,11 +10,18 @@ jogo termina. Pressionando a tela de Escape(Esc) o jogo é pausado e o jogador t
 
 ### Como executar
 
-É possivel jogar o jogo em qualquer navegador através do link abaixo.
+É possivel jogar o jogo em qualquer navegador através do link abaixo:
 
 ```
 https://simmer.io/@marcosgabrielgx/teste-da-blue-pixel
 ```
+
+O download da versão Desktop pode ser feito pelo link abaixo:
+
+```
+https://1drv.ms/u/s!AgjFpsJVN26o8mcnLv-U5pyrpv8z?e=PA8HoJ
+```
+Após o download descompacte o arquivo baixado, abra a pasta BluePixelTest e execute o arquivo BluePixelTest.
 
 ## Desenvolvimento
 
